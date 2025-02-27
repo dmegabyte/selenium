@@ -42,14 +42,14 @@ def test_login(driver):
 
         email_input = WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, 'loginform-username-input')),
-            message="Поле ввода email не найдено"
+            message="Поле ввода email не найдено."
         )
         email_input.clear()
         email_input.send_keys(TEST_USER_EMAIL)
 
         password_input = WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, 'loginform-password-input')),
-            message="Поле ввода пароля не найдено"
+            message="Поле ввода пароля не найдено."
         )
         password_input.clear()
         password_input.send_keys(TEST_USER_PASSWORD)
